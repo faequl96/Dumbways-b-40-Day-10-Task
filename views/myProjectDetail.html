@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dumbways Day 8 Task</title>
+    <link rel="stylesheet" href="../public/css/navigasi.css">
+    <link rel="stylesheet" href="../public/css/font.css">
+    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="stylesheet" href="../public/css/detailProject.css">
+    <link rel="icon" type="image/x-icon" href="../public/favicon/favicon.ico">
+</head>
+<body>
+    <nav>
+        <div class="kotakNav">
+            <div class="navLeft">
+                <ul>
+                    <li>
+                        <a href="/"><img src="../public/img/dumbways.png" alt="Dumbways Logo" class="logo"></a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/project">My Project</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="contact">
+                <div>
+                    <a href="/contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="projectDetail">
+        <div class="projectBox">
+            <div class="judul">
+                <h1>{{.Project.ProjectName}}</h1>
+            </div>
+            <div class="projectMetas">
+                <div class="heroImg">
+                    <img src="">
+                </div>
+                <div class="projectInfo">
+                    <div class="duration">
+                        <h3>Duration</h3>
+                        <div class="startEndDate">
+                            <img src="../public/img/calendar.png">
+                            <p>{{.Project.StartDateFormat}} - {{.Project.EndDateFormat}}</p>
+                        </div>
+                        <div class="durationInfo">
+                            <img src="../public/img/stopwatch.png">
+                            <p>{{$.Project.Duration}}</p>
+                        </div>
+                    </div>
+                    <div class="techno">
+                        <h3>Technology</h3>
+                        <div class="techGrid">
+                            {{range $index, $item := .Project.Techno}}
+                                {{if eq $item "Node JS"}}
+                                    <div class="node">
+                                        <img src="../public/img/node.png">
+                                        <p>Node JS</p>
+                                    </div>
+                                {{else if eq $item "Vue JS"}}
+                                    <div class="vue">
+                                        <img src="../public/img/vue.png">
+                                        <p>Vue JS</p>
+                                    </div>
+                                {{else if eq $item "React JS"}}
+                                    <div class="react">
+                                        <img src="../public/img/react.png">
+                                        <p>React JS</p>
+                                    </div>
+                                {{else if eq $item "TypeScript"}}
+                                    <div class="typeScript">
+                                        <img src="../public/img/typescript.png">
+                                        <p>TypeScript</p>
+                                    </div>
+                                {{end}}
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="projectContents">
+                <p>{{.Project.Description}}</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, doloribus exercitationem quo adipisci, dolore nobis nam debitis eveniet ullam, architecto consequatur cumque ea hic dolores sequi eaque inventore. Hic, earum asperiores. Aliquid accusamus quidem unde neque veniam dolore minima modi ipsum, eveniet recusandae. Aspernatur tenetur recusandae cumque consequuntur exercitationem possimus aliquid quasi pariatur maiores minima obcaecati, tempore iure quibusdam nulla!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit inventore architecto, delectus odit expedita quaerat alias veniam nisi dolorum iusto laborum similique obcaecati officiis quis earum commodi ratione cupiditate dolore ea quae adipisci sint. Dolorum quidem id, architecto, iste neque ratione illum incidunt accusantium autem ea rerum totam eum quaerat nobis. Nostrum voluptates modi magnam ex inventore quos aspernatur ad officiis necessitatibus, omnis minima totam. Iure, sapiente. Incidunt, quos sunt blanditiis quia fugiat quisquam! Sunt, animi at, unde repellat voluptate quidem laboriosam necessitatibus reiciendis, exercitationem quo illum? Adipisci debitis ea incidunt aliquid suscipit, maxime natus impedit commodi quis beatae neque.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque molestiae velit aspernatur enim nihil vitae harum tempore in alias quae! Quod odio aut cumque at. Labore autem incidunt explicabo quas dignissimos? Veritatis libero placeat corrupti esse distinctio eum, at architecto odit tempora, maxime quae corporis numquam cumque mollitia consectetur eaque debitis? Mollitia sapiente, commodi quasi aut a quos accusamus tenetur distinctio explicabo dolorem officiis nobis repellendus nostrum eos laboriosam possimus, at tempora! Fuga accusamus quidem laboriosam officiis quibusdam sed fugit.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ratione itaque ab totam enim voluptate corporis accusantium sint pariatur doloremque. Nihil accusantium ducimus, laborum nobis saepe quis nesciunt id sunt odio, voluptatibus nisi repudiandae. Repellendus error repellat maxime delectus quo enim suscipit repudiandae possimus velit, obcaecati est modi sapiente dolore et perferendis eum quia labore incidunt amet distinctio aut cum odit nulla. Consequatur minima reiciendis officiis adipisci nam dolores similique rem provident recusandae vero, temporibus, voluptatibus, odit consequuntur doloribus odio dolorem sapiente vel. Deserunt dolor et quidem nemo dignissimos at? Temporibus eius architecto neque vel non distinctio consequatur. Dicta obcaecati odit voluptate illum! Consequatur aspernatur at impedit eum fugit repellat quaerat quos magnam iste distinctio odit, tempore provident culpa delectus.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nulla repellat quos quas id temporibus ex accusamus quo ab. Impedit harum eligendi voluptatum? Iusto explicabo quis libero expedita delectus, quia tempore cumque incidunt assumenda, ratione illo impedit voluptas sequi ullam est dicta, officia animi. Adipisci, id minus unde sapiente exercitationem explicabo odit voluptas consectetur, iure tempore asperiores? Nesciunt, cum! Non quo ex optio consequuntur nisi, quos cumque at itaque eveniet.
+                </p>
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="../public/js/layoutingTechProjectDetail.js"></script> -->
+</body>
+</html>
+
+
+

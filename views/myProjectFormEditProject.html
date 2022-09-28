@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dumbways Day 8 Task</title>
+    <link rel="stylesheet" href="../public/css/navigasi.css">
+    <link rel="stylesheet" href="../public/css/font.css">
+    <link rel="stylesheet" href="../public/css/myProjectForm.css">
+    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="icon" type="image/x-icon" href="../public/favicon/favicon.ico">
+</head>
+<body>
+    
+    <nav>
+        <div class="kotakNav">
+            <div class="navLeft">
+                <ul>
+                    <li>
+                        <a href="/"><img src="../public/img/dumbways.png" alt="Dumbways Logo" class="logo"></a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/project">My Project</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="contact">
+                <div>
+                    <a href="/contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="form">    
+        <div class="judul">
+            <h1>EDIT MY PROJECT</h1>
+        </div>
+    
+        <form action="/edit-project/{{.Project.Id}}" method="POST">
+            <div>
+                <label>
+                    Project Name
+                    <input type="text" class="projectName input" name="projectName" value="{{.Project.ProjectName}}">
+                </label>
+            </div>
+    
+            <div class="date">
+                <label>
+                    Start Date
+                    <input type="date" class="startDate input" name="startDate" value="{{.Project.StartDateFormat}}">
+                </label>
+                <label>
+                    End Date
+                    <input type="date" class="endDate input" name="endDate" value="{{.Project.EndDateFormat}}">
+                </label>
+            </div>
+            
+            <div>
+                <label>
+                    Description
+                    <textarea name="description" class="description input" cols="30" rows="6">{{.Project.Description}}</textarea>
+                </label>
+            </div>
+    
+            <div>
+                <label>
+                    Technology
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="nodeJs" class="nodeJs lgcb" value="Node JS">
+                            Node JS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="reactJs" class="reactJs lgcb" value="React JS">
+                            React JS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="vueJs" class="vueJs lgcb" value="Vue JS">
+                            Vue JS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="typeScript" class="typeScript lgcb" value="TypeScript">
+                            TypeScript
+                        </label>
+                    </div>
+                </label>
+            </div>
+    
+            <div>
+                <label>
+                    Upload Image
+                    <div class="upload">
+                        <div class="choose" style="cursor: pointer;">choose</div>
+                        <img src="../public/img/link.png" alt="Choose Image" class="linkLogo">
+                        <input type="file" accept="image/png, image/jpeg" class="uploadImg" style="visibility:hidden;">
+                    </div>
+                    
+                </label>
+            </div>
+            <div class="submit">
+                <button class="create">Save</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="../public/js/requiredForMyProjectForm.js"></script>
+</body>
+</html>

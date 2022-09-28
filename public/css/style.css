@@ -1,0 +1,59 @@
+.ff-tommy-bold {
+    font-family: 'made_tommy_softbold';
+}
+
+.ff-tommy-md {
+    font-family: 'made_tommy_softmedium';
+}
+
+.ff-tommy-reg {
+    font-family: 'made_tommy_softregular';
+}
+
+.btn-dangered {
+    background-color: #ff4500 !important;
+}
+
+.w-62 {
+    width: 62%;
+}
+
+.w-34 {
+    width: 34%;
+}
+
+.bg-grey-light {
+    background-color: rgb(223, 228, 232);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bs-bb {
+    box-sizing: border-box;
+}
+
+.-ms-2 {
+    margin-left: -2%;
+}
+
+.-ms-5 {
+    margin-left: -5%;
+}
+
+.-mt-3 {
+    margin-left: -3%;
+}
+
+.container-fluided {
+    width: 94vw !important;
+}
+
+.h-40px {
+    height: 40px;
+}
+
+.w-250px {
+    width: 250px;
+}

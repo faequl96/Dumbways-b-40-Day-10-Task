@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dumbways Day 8 Task</title>
+    <link rel="stylesheet" href="../public/css/navigasi.css">
+    <link rel="stylesheet" href="../public/css/font.css">
+    <link rel="stylesheet" href="../public/css/this.myProject.css">
+    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="icon" type="image/x-icon" href="../public/favicon/favicon.ico">
+</head>
+<body>
+    
+    <nav>
+        <div class="kotakNav">
+            <div class="navLeft">
+                <ul>
+                    <li>
+                        <a href="/"><img src="../public/img/dumbways.png" alt="Dumbways Logo" class="logo"></a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a style="font-weight: 600; letter-spacing: 1px;">My Project</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="contact">
+                <div>
+                    <a href="/contact">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="myProject">
+        <div class="judul">
+            <h1>MY PROJECT</h1>
+            <a class="creatNew" href="/form-project">Create New</a>
+        </div>
+
+        <div class="container">
+            {{range $index, $data := .Projects}}
+            <div class="card card{{$index}}">
+                <a href="/project/{{$data.Id}}" class="maxSizeImg">
+                    <img src="" alt="" class="imgContent">
+                </a>
+                <div class="judulCard">
+                    <div class="kotakJudul">
+                        <h3>{{$data.ProjectName}}</h3>
+                    </div>
+                    <div class="durasi">
+                        <div>
+                            <p>Duration :</p>
+                        </div>
+                        <div>
+                            <p>{{$data.Duration}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="isiCard">
+                    <p>{{$data.Description}}</p>
+                </div>
+                <div class="techCheck">
+                    {{range $index, $item := $data.Techno}}
+                        {{if eq $item "Node JS"}}
+                            <img src="../public/img/node.png">
+                        {{else if eq $item "React JS"}}
+                            <img src="../public/img/react.png">
+                        {{else if eq $item "Vue JS"}}
+                            <img src="../public/img/vue.png">
+                        {{else if eq $item "TypeScript"}}
+                            <img src="../public/img/typescript.png">
+                        {{end}}
+                    {{end}}
+                </div>
+                <div class="editDelete">
+                    <a href="/form-edit-project/{{$data.Id}}" class="edit">Edit</a>
+                    <a href="/delete-project/{{$data.Id}}" class="delete">Delete</a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    
+
+    <!-- <script src="../public/js/layoutingTech.js"></script> -->
+</body>
+</html>
